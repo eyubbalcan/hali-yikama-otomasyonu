@@ -3,9 +3,12 @@ import Input from "./companents/input/Input";
 import Button from "./companents/button/Button";
 import Form from "./companents/form/Form";
 import { useState } from "react";
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 function App() {
-  const [user, setUser] = useState({ name: "", password: "" });
+  const [user, setUser] = useState({ name: "", password: "" }); //user ve setuse Hook"UseState"(araştır): iki dğeiken istiyor biri değişken biri de fonksiyon.
   const handleChange = (e) => {
     if (e.target.type === "text") {
       setUser({ ...user, name: e.target.value });
@@ -17,12 +20,16 @@ function App() {
   const handleClick = (e) => {
     if (user.name === "") {
       alert("Kullanıcı adı boş girilemez");
-    } else if (user.password === "") {
-      alert("Parola boş girilemez");
+    // } else if (user.password === "") {
+    //   alert("Parola boş girilemez");
     } else {
-      alert(
-        "Kullanıcı Adınız :  " + user.name + "  Şifreniz:  " + user.password
-      );
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <Sidebar />
+  </BrowserRouter>
+);
+    
     }
   };
 
@@ -36,6 +43,7 @@ function App() {
           value={user.name}
           placeHolder={"Kullanıcı Adınız"}
           onChange={handleChange}
+          autoComplete="on"
         />
         <Input
           type={"password"}

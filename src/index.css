@@ -11,15 +11,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  background-color:#262626; background-size:cover;
-  background-image: url(../img/multiple-carpets-grand-bazaar-istanbul-turkey.jpg);
+
+  /* background-color:#262626; background-size:cover; */
+  /* background-image: url(img/multiple-carpets-grand-bazaar-istanbul-turkey.jpg); */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a {
+  text-decoration: none;
+}
+
+
+ /* nav {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+  padding: 50px 75px;
+  border-right: 1px solid #dee0ea;
+}  */
 
 /* body
 {
