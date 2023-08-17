@@ -1,26 +1,27 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 import "./App.css";
 import SideMenu from "./companents/SideMenu";
-import { Routes, Route, Link, NavLink, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import ServisPage from "./pages/Servis";
+import HesapPage from "./pages/Hesap";
+import DagitimPage from "./pages/Dagitim";
+import BeklenenPage from "./pages/Beklenen";
+
+
+
+
+
+
 
 const Home = () => {
   return <h1>Ana Sayfa</h1>
 };
-const Servis = () => {
-  return <h1>Servis</h1>
-};
-const Alinacak = () => {
-  return <h1>Alınacak</h1>
-};
-const Beklenen = () => {
-  return <h1>Beklenen</h1>
-};
-const Dagitilicak = () => {
-  return <h1>Dağıtılıcak</h1>
-};
-const Hesap = () => {
-  return <h1>Hesap</h1>
-};
+
+
+
+
+
 
 function App() {
   const [inactive, setInactive] = useState(false);
@@ -34,11 +35,10 @@ function App() {
     <div className={`container ${inactive ? 'inactive' : ''}`}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/servis" element={<Servis />} />
-        <Route path="/alinicak" element={<Alinacak />} />
-        <Route path="/bekleme" element={<Beklenen />} />
-        <Route path="/dagitim" element={<Dagitilicak />} />
-        <Route path="/hesap" element={<Hesap />} />
+        <Route path="/servis" element={<ServisPage />} />
+        <Route path="/bekleme" element={<BeklenenPage />} />
+        <Route path="/dagitim" element={<DagitimPage />} />
+        <Route path="/hesap" element={<HesapPage />} />
       </Routes>
     </div>
   </div>

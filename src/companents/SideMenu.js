@@ -7,7 +7,7 @@ const menuItems = [
   { name: "Anasayfa", to: "/", iconClassName: "bi bi-house-door-fill" },
   {
     name: "Servis",
-    exact: true,
+    
     to: "/servis",
     iconClassName: "bi bi-bus-front",
     subMenus: [

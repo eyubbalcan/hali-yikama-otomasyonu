@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function MenuItem({
   name,
   subMenus,
-  exact,
+
   to,
   iconClassName,
   onClick,
@@ -14,7 +14,7 @@ export default function MenuItem({
 
   return (
     <li onClick={onClick}>
-      <NavLink exact to={to} onClick={() => setExpand(!expand)} className="menu-item">
+      <NavLink to={to} onClick={() => setExpand(!expand)} className="menu-item">
         <div className="menu-icon">
           <i className={iconClassName}></i>
         </div>
